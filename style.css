@@ -1,0 +1,33 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'MS PGothic', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #0ff;
+  text-decoration: none;
+}
+
+.header, .footer {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.menu {
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 10px 0;
+  font-size: 18px;
+}
