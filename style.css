@@ -1,33 +1,30 @@
 body {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   font-family: 'MS PGothic', sans-serif;
-  margin: 0;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
   padding: 0;
+}
+
+li {
+  margin: 12px 0;
 }
 
 a {
-  color: #0ff;
   text-decoration: none;
+  font-size: 20px;
 }
 
-.header, .footer {
-  background-color: #222;
-  padding: 10px;
-  text-align: center;
-  font-weight: bold;
+@keyframes blink-pink {
+  0%   { color: #ff69b4; }
+  50%  { color: white; }
+  100% { color: #ff69b4; }
 }
 
-.menu {
-  padding: 15px;
-}
-
-.menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.menu li {
-  margin: 10px 0;
-  font-size: 18px;
+.blink {
+  animation: blink-pink 1s infinite;
 }
