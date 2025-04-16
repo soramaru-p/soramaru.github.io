@@ -1,0 +1,43 @@
+
+body {
+  background: black;
+  color: white;
+  font-family: 'MS PGothic', sans-serif;
+  text-align: center;
+  background: repeating-linear-gradient(
+    45deg,
+    #111,
+    #111 2px,
+    #222 2px,
+    #222 4px
+  );
+  animation: bgMove 1s linear infinite;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 12px 0;
+}
+
+a {
+  text-decoration: none;
+  font-size: 20px;
+  display: inline-block;
+  animation: glitch 0.4s infinite;
+}
+
+@keyframes glitch {
+  0%, 100% { opacity: 1; }
+  25% { opacity: 0.3; transform: translate(0px, -1px); }
+  50% { opacity: 0.7; transform: translate(1px, 1px); }
+  75% { opacity: 0.5; transform: translate(-1px, 0px); }
+}
