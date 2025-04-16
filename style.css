@@ -1,30 +1,33 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   font-family: 'MS PGothic', sans-serif;
-  text-align: center;
-}
-
-ul {
-  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-li {
-  margin: 12px 0;
-}
-
 a {
+  color: #0ff;
   text-decoration: none;
-  font-size: 20px;
 }
 
-@keyframes blink-pink {
-  0%   { color: #ff69b4; }
-  50%  { color: white; }
-  100% { color: #ff69b4; }
+.header, .footer {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
 }
 
-.blink {
-  animation: blink-pink 1s infinite;
+.menu {
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 10px 0;
+  font-size: 18px;
 }
