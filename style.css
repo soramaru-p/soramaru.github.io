@@ -1,56 +1,62 @@
-
 body {
-  background: black;
+  margin: 0;
+  padding: 0;
+  background: #111;
   color: white;
-  font-family: 'MS PGothic', sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   text-align: center;
-  background: repeating-linear-gradient(
-    45deg,
-    #111,
-    #111 2px,
-    #222,
-    #222 4px
-  );
-  animation: bgMove 1s linear infinite;
+  overflow: hidden;
 }
 
-@keyframes bgMove {
-  0% { background-position: 0 0; }
-  100% { background-position: 40px 40px; }
+h1 {
+  color: white;
+  margin-top: 30px;
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
+  margin-top: 40px;
 }
 
 li {
-  margin: 12px 0;
+  margin: 20px 0;
 }
 
 a {
-  text-decoration: none;
-  font-size: 20px;
-  display: inline-block;
-  animation: glitch 0.5s infinite;
   color: deeppink;
+  font-size: 20px;
+  text-decoration: none;
+  animation: flash 1.5s infinite;
 }
 
-@keyframes glitch {
-  0%, 100% { opacity: 1; transform: translate(0px, 0px); }
-  25% { opacity: 0.1; transform: translate(3px, -3px); }
-  50% { opacity: 0.5; transform: translate(-2px, 2px); }
-  75% { opacity: 0.2; transform: translate(4px, 0px); }
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
 }
 
-/* モバイル用に強調した点滅効果 */
-@media (max-width: 768px) {
-  a {
-    animation: blink 0.3s infinite;
+p {
+  margin-top: 50px;
+  font-size: 16px;
+}
+
+.raindrop {
+  position: absolute;
+  width: 2px;
+  height: 12px;
+  background: deeppink;
+  animation: fall linear infinite;
+  opacity: 0.4;
+  border-radius: 1px;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0.5;
   }
-
-  @keyframes blink {
-    0%, 100% { color: deeppink; }
-    50% { color: black; }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
   }
 }
