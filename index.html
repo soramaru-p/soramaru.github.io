@@ -3,19 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>そらまるの部屋</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header">◆ そらまるの部屋 ◆</div>
-  <div class="menu">
-    <ul>
-      <li>● <a href="diary.html">日記</a></li>
-      <li>● <a href="#">音楽</a></li>
-      <li>● <a href="#">思い出</a></li>
-      <li>● <a href="#">掲示板風メモ</a></li>
-    </ul>
-  </div>
-  <div class="footer">Last update: 2025-04-15</div>
+  <h1>◆ そらまるの部屋 ◆</h1>
+  <ul>
+    <li><a href="diary.html">● 日記</a></li>
+    <li><a href="#">● 音楽</a></li>
+    <li><a href="#">● 思い出</a></li>
+    <li><a href="#">● 掲示板風メモ</a></li>
+  </ul>
+  <p>Last update: 2025-04-15</p>
+
+  <script>
+    for (let i = 0; i < 100; i++) {
+      const drop = document.createElement("div");
+      drop.className = "raindrop";
+      drop.style.left = Math.random() * 100 + "vw";
+      drop.style.animationDelay = Math.random() + "s";
+      drop.style.animationDuration = (0.5 + Math.random()) + "s";
+      document.body.appendChild(drop);
+    }
+  </script>
 </body>
 </html>
